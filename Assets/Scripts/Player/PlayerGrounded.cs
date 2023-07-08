@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class PlayerGrounded : MonoBehaviour
 {
-    Player player;
-    [SerializeField] private LayerMask groundLayer;
-    private void Awake()
-    {
-        player = GetComponentInParent<Player>();
-    }
+    public Collider collid;
+
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == groundLayer)
-        {
-            player.other = other;
-        }
-        else
-        {
-            player.other = null;
-        }
+        collid = other;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        collid = null;
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Collider other;
     public bool disablePlayerInput;
     public bool interacting = false;
+    public bool groundCollid = false;
 
     [Header("PlayerMovement")]
     [SerializeField] private float playerWalkSpeed;
@@ -23,10 +23,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerFallVelocity;
     [SerializeField] private float playerLeapingVelocity;
     [SerializeField] private float playerJumpAirTime;
-    [SerializeField] private float groundedraycastHightOffset = 0.5f;
+    [SerializeField] private float groundedraycastHightOffset = 0.12f;
     [SerializeField] private LayerMask groundLayerMask;
     Rigidbody playerRigidbody;
     float inAirTimer;
+    [SerializeField] PlayerGrounded granoundCollid;
 
 
     #region private
@@ -74,13 +75,8 @@ public class Player : MonoBehaviour
     }
     private void PlayerFall()
     {
-        //Physics.SphereCast(raycastStarPosition, 0.2f, -Vector3.up, out RaycastHit raycastHit1, groundLayerMask)
-        Vector3 raycastStarPosition = transform.position;
-        raycastStarPosition.y = raycastStarPosition.y + groundedraycastHightOffset;
-        
-        if (other)
+        if (granoundCollid.collid)
         {
-           
             animator.SetBool("Fall", false);
             if (!playerIsGrounded && !interacting)
             {
@@ -91,21 +87,19 @@ public class Player : MonoBehaviour
 
         }
 
-        if (other)
+        if (!granoundCollid.collid)
         {
             playerIsGrounded = false;
         }
 
         if (!playerIsGrounded)
         {
+            playerRigidbody.velocity = Vector3.zero;
             inAirTimer = inAirTimer + Time.deltaTime;
             playerRigidbody.AddForce(transform.forward * playerLeapingVelocity);
             playerRigidbody.AddForce(-Vector3.up * playerFallVelocity * inAirTimer);
             animator.SetBool("Fall", true);
-            if (!interacting)
-            {
-                interacting = true;
-            }
+            interacting = true;
         }
     }
 
@@ -156,14 +150,5 @@ public class Player : MonoBehaviour
     private void PlayLandShound()
     {
 
-    }
-
-
-    void OnDrawGizmos()
-    {
-        Vector3 raycastStarPosition = transform.position;
-        raycastStarPosition.y = raycastStarPosition.y + groundedraycastHightOffset;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(raycastStarPosition, 0.2f);
     }
 }
