@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Collider other;
     public bool disablePlayerInput;
     public bool interacting = false;
 
@@ -73,10 +74,11 @@ public class Player : MonoBehaviour
     }
     private void PlayerFall()
     {
+        //Physics.SphereCast(raycastStarPosition, 0.2f, -Vector3.up, out RaycastHit raycastHit1, groundLayerMask)
         Vector3 raycastStarPosition = transform.position;
         raycastStarPosition.y = raycastStarPosition.y + groundedraycastHightOffset;
         
-        if (Physics.SphereCast(raycastStarPosition, 0.2f, -Vector3.up, out RaycastHit raycastHit, groundLayerMask))
+        if (other)
         {
            
             animator.SetBool("Fall", false);
@@ -89,7 +91,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if (!Physics.SphereCast(raycastStarPosition, 0.2f, -Vector3.up, out RaycastHit raycastHit1, groundLayerMask))
+        if (other)
         {
             playerIsGrounded = false;
         }

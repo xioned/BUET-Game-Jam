@@ -14,11 +14,11 @@ public class PlayerGrounded : MonoBehaviour
     {
         if (other.gameObject.layer == groundLayer)
         {
-            player.playerIsGrounded = true;
+            player.other = other;
         }
         else
         {
-            player.playerIsGrounded = false;
+            player.other = null;
         }
     }
 }
