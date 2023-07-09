@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -14,6 +15,16 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+
+        #region Dash
+        [Header("Dsah")]
+        public float dashTime;
+        public float dashSpeed;
+        public Vector3 dashDirection;
+        public bool isDashing;
+        public GameObject dashParticle;
+        #endregion Dash
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -155,7 +166,8 @@ namespace StarterAssets
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
-
+            Dash();
+            if (isDashing) { return; }
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -174,7 +186,32 @@ namespace StarterAssets
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
         }
+        private void Dash()
+        {
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Z))
+            {
+                if (isDashing) { return; }
+                dashDirection = transform.forward;
+                isDashing = true;
+                dashParticle.SetActive(true);
+                dashParticle.GetComponent<ParticleSystem>().Play();
+                _animator.SetBool("Dash", true);
+                StartCoroutine(DashCoroutine());
+            }
 
+        }
+        private IEnumerator DashCoroutine()
+        {
+            float startTime = Time.time;
+            while (Time.time < startTime + dashTime)
+            {
+                _controller.Move(dashDirection * dashSpeed * Time.deltaTime);
+                yield return null;
+            }
+            _animator.SetBool("Dash", false);
+            dashParticle.SetActive(false);
+            isDashing = false;
+        }
         private void GroundedCheck()
         {
             // set sphere position, with offset
