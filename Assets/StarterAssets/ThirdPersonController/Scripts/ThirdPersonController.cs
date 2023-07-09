@@ -152,10 +152,21 @@ namespace StarterAssets
         private void Update()
         {
             Dash();
+            Attack();
+            if (animator.GetBool("Attack1")) { return; }
             if (isDashing) { return; }
             JumpAndGravity();
             GroundedCheck();
             Move();
+        }
+
+        private void Attack()
+        {
+            if (!Grounded) { return; }
+            if (UnityEngine.Input.GetMouseButtonDown(0))
+            {
+                animator.SetBool("Attack1", true);
+            }
         }
 
         private void Dash()
