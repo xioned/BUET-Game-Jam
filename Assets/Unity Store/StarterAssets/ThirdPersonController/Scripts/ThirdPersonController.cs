@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -15,7 +16,6 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
-
         #region Dash
         [Header("Dsah")]
         public float dashTime;
@@ -23,7 +23,6 @@ namespace StarterAssets
         public Vector3 dashDirection;
         public bool isDashing;
         public GameObject dashParticle;
-        public GameObject dashParticle2;
         #endregion Dash
 
         [Header("Player")]
@@ -194,13 +193,9 @@ namespace StarterAssets
                 if (isDashing) { return; }
                 dashDirection = transform.forward;
                 isDashing = true;
-                _animator.SetBool("Dash", true);
-
                 dashParticle.SetActive(true);
                 dashParticle.GetComponent<ParticleSystem>().Play();
-
-                dashParticle2.SetActive(true);
-                dashParticle2.GetComponent<ParticleSystem>().Play();
+                _animator.SetBool("Dash", true);
                 StartCoroutine(DashCoroutine());
             }
 
@@ -215,7 +210,6 @@ namespace StarterAssets
             }
             _animator.SetBool("Dash", false);
             dashParticle.SetActive(false);
-            dashParticle2.SetActive(false);
             isDashing = false;
         }
         private void GroundedCheck()
