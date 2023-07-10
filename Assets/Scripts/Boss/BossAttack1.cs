@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeAttack : MonoBehaviour
+public class BossAttack1 : MonoBehaviour
 {
-    [SerializeField] float Damage;
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            //Damage
+            Debug.Log("Player Damage");
         }
     }
 }

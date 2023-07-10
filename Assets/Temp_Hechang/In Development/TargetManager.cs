@@ -12,15 +12,15 @@ public class TargetManager : MonoBehaviour
 
     bool zoomIn;
 
-    [SerializeField] private CinemachineFreeLook cinemachineFreelook;
+    [SerializeField] private CinemachineFreeLook cinemachineVirtualCamera;
 
 
     private void LateUpdate()
     {
         if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
-           // Transform lookAtTrans = cinemachineVirtualCamera.LookAt;
-           // targetObj.position = lookAtTrans.position;
+            Transform lookAtTrans = cinemachineVirtualCamera.LookAt;
+            targetObj.position = lookAtTrans.position;
         }
     }
 }
