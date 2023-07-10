@@ -79109,6 +79109,8 @@ GameObject:
   - component: {fileID: 4592228737782566105}
   - component: {fileID: 7077296658185024036}
   - component: {fileID: 2883221622009887511}
+  - component: {fileID: 3607966270350963567}
+  - component: {fileID: 5027677347578156986}
   m_Layer: 0
   m_Name: Slam Effects (1)
   m_TagString: Untagged
@@ -83847,6 +83849,40 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!135 &3607966270350963567
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600708683317292142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 175
+  m_Center: {x: 0.000045776367, y: -0.000038146973, z: -0.00024414062}
+--- !u!114 &5027677347578156986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600708683317292142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bc423dc6c82d24b93e705c92579e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 70
 --- !u!1 &7622009407165464880
 GameObject:
   m_ObjectHideFlags: 0
@@ -83858,6 +83894,8 @@ GameObject:
   - component: {fileID: 4276195659965965007}
   - component: {fileID: 4163085928362379153}
   - component: {fileID: 3647455781823824371}
+  - component: {fileID: 5388086798885976873}
+  - component: {fileID: 7188843644602825291}
   m_Layer: 0
   m_Name: Slam Effects
   m_TagString: Untagged
@@ -88596,6 +88634,40 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!135 &5388086798885976873
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622009407165464880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 175
+  m_Center: {x: 0.000045776367, y: -0.000038146973, z: -0.00024414062}
+--- !u!114 &7188843644602825291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622009407165464880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bc423dc6c82d24b93e705c92579e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 70
 --- !u!1 &7657403435586340364
 GameObject:
   m_ObjectHideFlags: 0
@@ -94167,7 +94239,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8198745683496445964}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8

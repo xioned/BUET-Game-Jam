@@ -30067,6 +30067,8 @@ GameObject:
   - component: {fileID: 5122315267015440511}
   - component: {fileID: 4215044715788878095}
   - component: {fileID: 6666964625047183417}
+  - component: {fileID: 3843958140618603348}
+  - component: {fileID: 9125232694506780234}
   m_Layer: 0
   m_Name: Slam Effects (1)
   m_TagString: Untagged
@@ -34805,6 +34807,42 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!136 &3843958140618603348
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129807269022504612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.0000038147, y: -6.252776e-13, z: 0.000000059605384}
+--- !u!114 &9125232694506780234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129807269022504612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bc423dc6c82d24b93e705c92579e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &3179174359658069741
 GameObject:
   m_ObjectHideFlags: 0
@@ -34926,7 +34964,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3395044920876511128}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
@@ -34960,9 +34998,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.2135804
+  m_Height: 1.7108046
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9611096, z: 0}
+  m_Center: {x: 0, y: 0.7124974, z: 0}
 --- !u!114 &3343852472540831906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79659,6 +79697,8 @@ GameObject:
   - component: {fileID: 5900689671815372116}
   - component: {fileID: 2828963038785029768}
   - component: {fileID: 188747037553414308}
+  - component: {fileID: 7502445610593756656}
+  - component: {fileID: 1168981138297985233}
   m_Layer: 0
   m_Name: Slam Effects (1)
   m_TagString: Untagged
@@ -84397,6 +84437,42 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!136 &7502445610593756656
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946658685983547974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.0000038147, y: -6.252776e-13, z: 0.000000059605384}
+--- !u!114 &1168981138297985233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946658685983547974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bc423dc6c82d24b93e705c92579e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &6445506510976696883
 GameObject:
   m_ObjectHideFlags: 0

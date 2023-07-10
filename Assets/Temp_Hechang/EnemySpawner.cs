@@ -19,13 +19,13 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            if(Random.Range(0, 10) < 8)
+            if(Random.Range(0, 20) < 15)
             {
                 Instantiate(boss, spawnpoints[Random.Range(0, spawnpoints.Length)].position, Quaternion.identity);
             }
             else
             {
-                if (Random.Range(0, 10) < 5)
+                if (Random.Range(0, 15) <= 5)
                 {
                     Instantiate(Slime[Random.Range(0, golem.Length)], spawnpoints[Random.Range(0, spawnpoints.Length)].position, Quaternion.identity);
                 }
@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(Random.Range(4, 10));
+            yield return new WaitForSeconds(Random.Range(15, 40));
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8635221731658472276}
   - component: {fileID: 8486705051839512856}
   - component: {fileID: 8987341303668515252}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4063711406104209182}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TransformMotion
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 5158324999128357481}
   - component: {fileID: 7402323136231034574}
   - component: {fileID: 8115268126015128164}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Red Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468787cd1a27a504e94ac0410d265f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blastParticle: {fileID: 4560696177497155806, guid: 43904f8dc0fba8a4582908385499e254, type: 3}
+  particles: {fileID: 3094891796290881031, guid: 43904f8dc0fba8a4582908385499e254, type: 3}
   color: 0
   damage: 0
 --- !u!1 &2421886806305044098
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 4408540601835165968}
   - component: {fileID: 266858068009565254}
   - component: {fileID: 8217810869708131642}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 6987142421834845159}
   - component: {fileID: 8186986111574002174}
   - component: {fileID: 3119272268233662308}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: FireTrail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5215,7 +5215,7 @@ GameObject:
   - component: {fileID: 4945476717618632506}
   - component: {fileID: 4748637798140514575}
   - component: {fileID: 5703230936693971656}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9867,7 +9867,7 @@ GameObject:
   - component: {fileID: 4949489380715720018}
   - component: {fileID: 2990972792000053046}
   - component: {fileID: 1478264275855998009}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10055,7 +10055,7 @@ GameObject:
   - component: {fileID: 3036417623786370160}
   - component: {fileID: 3371716132357758134}
   - component: {fileID: 7357533181940022261}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TrailSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14652,7 +14652,7 @@ GameObject:
   - component: {fileID: 2458586995589691194}
   - component: {fileID: 7615502201975666416}
   - component: {fileID: 4143800466153726460}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: FireExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

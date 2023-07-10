@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3194338318765920463}
   - component: {fileID: 8919189946258047435}
   - component: {fileID: 217658646611102496}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2927091500814719}
   - component: {fileID: 3242749555212215724}
   - component: {fileID: 8544133584266269181}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4862,7 +4862,7 @@ GameObject:
   - component: {fileID: 3939218391845713625}
   - component: {fileID: 3442606811208933933}
   - component: {fileID: 5550324581838553123}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Charging Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9618,7 +9618,7 @@ GameObject:
   - component: {fileID: 3444786285887006148}
   - component: {fileID: 1626267735129387325}
   - component: {fileID: 6608133366718922878}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9815,7 +9815,7 @@ GameObject:
   - component: {fileID: 6005095830581970764}
   - component: {fileID: 1925748367640583526}
   - component: {fileID: 1450680161556697796}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: ParticlesLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14467,7 +14467,7 @@ GameObject:
   - component: {fileID: 3975295622559697127}
   - component: {fileID: 78237844549664811}
   - component: {fileID: 7002781887362146385}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Arrow mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14551,7 +14551,7 @@ GameObject:
   - component: {fileID: 3779355939547265708}
   - component: {fileID: 2237769389271035651}
   - component: {fileID: 612852650462578353}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: WindZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14646,7 +14646,7 @@ GameObject:
   - component: {fileID: 8524466273150201731}
   - component: {fileID: 2026976467365919094}
   - component: {fileID: 6138847946949419520}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: ParticlesLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19298,7 +19298,7 @@ GameObject:
   - component: {fileID: 409823761995714548}
   - component: {fileID: 6678220377734273556}
   - component: {fileID: 8651904607427426047}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: WindZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19394,7 +19394,7 @@ GameObject:
   - component: {fileID: 2759060530543467783}
   - component: {fileID: 2030863962010758773}
   - component: {fileID: 6119534213018849791}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19498,7 +19498,7 @@ GameObject:
   - component: {fileID: 6687105870354320850}
   - component: {fileID: 3623600914230926025}
   - component: {fileID: 592746599169989954}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24231,7 +24231,7 @@ GameObject:
   - component: {fileID: 2935574608829901316}
   - component: {fileID: 3035223662227358997}
   - component: {fileID: 7698552181742245191}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24429,7 +24429,7 @@ GameObject:
   - component: {fileID: 8374404459540427762}
   - component: {fileID: 7672392486699687950}
   - component: {fileID: 4720486186275727308}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Large Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29184,7 +29184,7 @@ GameObject:
   - component: {fileID: 7520281077062477570}
   - component: {fileID: 2653893095718825102}
   - component: {fileID: 2976568463516244387}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Large Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

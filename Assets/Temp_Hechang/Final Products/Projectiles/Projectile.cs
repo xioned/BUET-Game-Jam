@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
         Purple
     }
 
+    public GameObject particles;
+
     public Projectile_Color color;
 
     public float damage;
@@ -41,16 +43,19 @@ public class Projectile : MonoBehaviour
             collision.collider.GetComponent<Health>().DecreaseHealth((int)damage);
         }
 
-        if(!grabbed)
+        if (collision.collider.CompareTag("Player"))
+        {
+            collision.collider.GetComponent<Health>().DecreaseHealth((int)damage);
+        }
+
+        if (!grabbed)
+            Destroy(Instantiate(particles, transform.position, Quaternion.identity), 5f);
             Destroy(gameObject);
     }
 
     public bool TryToGrab(Projectile_Color grabColor, Transform position)
     {
-        Debug.Log("I am of color : " + color);
-        Debug.Log("Trying to grab with : " + grabColor);
-        Debug.Log("So, I got caught : " + (color == grabColor));
-
+       
         if(color == grabColor)
         {
             grabbed = true;

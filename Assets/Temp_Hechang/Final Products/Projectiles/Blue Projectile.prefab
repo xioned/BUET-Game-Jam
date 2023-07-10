@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1156411918290199269}
   - component: {fileID: 3734492629338069682}
   - component: {fileID: 8358506432239517522}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4663,7 +4663,7 @@ GameObject:
   - component: {fileID: 711192012173019162}
   - component: {fileID: 2368823461657603847}
   - component: {fileID: 4314082224440448596}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4869,7 +4869,7 @@ GameObject:
   - component: {fileID: 7414020988104890765}
   - component: {fileID: 135850753329839608}
   - component: {fileID: 4336344255055459449}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TrailSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9464,7 +9464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227504845319452713}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9497,7 +9497,7 @@ GameObject:
   - component: {fileID: 566776336083912797}
   - component: {fileID: 6515924026068258782}
   - component: {fileID: 1643054557758327822}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: LinesExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14242,7 +14242,7 @@ GameObject:
   - component: {fileID: 5731183131168139245}
   - component: {fileID: 3248907426825060273}
   - component: {fileID: 6413249330047035147}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: FireTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18985,7 +18985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3973923743660376167}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TransformMotion
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
@@ -19020,7 +19020,7 @@ GameObject:
   - component: {fileID: 4951984455305986677}
   - component: {fileID: 6693722857992753733}
   - component: {fileID: 8391475959238090941}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Lines2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23763,7 +23763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8297465582028490746}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CollisionEffect(Clone) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23800,7 +23800,7 @@ GameObject:
   - component: {fileID: 4728461382627845970}
   - component: {fileID: 3503270974447439785}
   - component: {fileID: 7547321044485670706}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Rings2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28509,7 +28509,7 @@ GameObject:
   - component: {fileID: 4103333848962050014}
   - component: {fileID: 1372064217801358625}
   - component: {fileID: 4618161550014728317}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Rings (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33158,7 +33158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2940129739870975901}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CollisionEffect(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33197,7 +33197,7 @@ GameObject:
   - component: {fileID: 7090130258343754170}
   - component: {fileID: 7176399894519515949}
   - component: {fileID: 2525983987002914428}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Blue Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -33334,7 +33334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468787cd1a27a504e94ac0410d265f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blastParticle: {fileID: 5471103110368455375, guid: b7007941a0f4f284a852c01ceea91cfc, type: 3}
+  particles: {fileID: 6993563942704426128, guid: b7007941a0f4f284a852c01ceea91cfc, type: 3}
   color: 1
   damage: 0
 --- !u!1 &8322498707607922963
@@ -33348,7 +33348,7 @@ GameObject:
   - component: {fileID: 4379345681934825565}
   - component: {fileID: 6956334679784465979}
   - component: {fileID: 9221969493715178646}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
