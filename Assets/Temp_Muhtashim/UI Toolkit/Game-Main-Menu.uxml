@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Temp_Muhtashim/UI%20Toolkit/Stylesheet.uss?fileID=7433441132597879392&amp;guid=2f38293ace99c964486eafa02272c028&amp;type=3#Stylesheet" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 1%; margin-right: 52%; margin-top: 5%; margin-bottom: 2%; padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 4%; -unity-text-align: upper-left; justify-content: flex-end;">
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="Button-Start-Game" class="button-main-menu" />
+            <ui:Button text="Exit Game" display-tooltip-when-elided="true" name="Button-Exit-Game" class="button-main-menu" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

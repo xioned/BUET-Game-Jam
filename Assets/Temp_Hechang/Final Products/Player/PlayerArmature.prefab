@@ -6788,6 +6788,7 @@ GameObject:
   - component: {fileID: 4664744839155276460}
   - component: {fileID: 3017735457674882676}
   - component: {fileID: 8866153449368144211}
+  - component: {fileID: 7383615569882617679}
   m_Layer: 9
   m_Name: PlayerArmature
   m_TagString: Player
@@ -6816,7 +6817,7 @@ Transform:
   - {fileID: 7220801063610792078}
   - {fileID: 1723488197329666622}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7072404980946561326
 MonoBehaviour:
@@ -7226,6 +7227,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultHealthAmount: 1000
+--- !u!114 &7383615569882617679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940669439032028081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076645adbacc78242be40205c3e7e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 8800530426846336842, guid: 1b993eafb7b591549aa6ad375b3c5dc1, type: 3}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1020525571250806410
 GameObject:
   m_ObjectHideFlags: 0
