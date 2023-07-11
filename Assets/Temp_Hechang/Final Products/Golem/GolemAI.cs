@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class GolemAI : MonoBehaviour
 {
-    EnemySoundsManager soundManager;
 
     [Header("Movement Control")]
     Transform target;
@@ -68,13 +67,10 @@ public class GolemAI : MonoBehaviour
             animator.SetTrigger("Death");
 
             this.enabled = false;
-
-            soundManager.PlayDeath();
         }
         else
         {
             animator.SetTrigger("Hit");
-            soundManager.PlayHit();
 
         }
     }
@@ -99,8 +95,6 @@ public class GolemAI : MonoBehaviour
         //agent.destination = target.position;
 
         StartCoroutine(ShootProjectile());
-
-        soundManager.PlayGrowl();
     }
 
     private void Update()
@@ -113,15 +107,11 @@ public class GolemAI : MonoBehaviour
             agent.destination = target.position;
 
             animator.SetBool("Walk", true);
-
-            soundManager.PlayWalk();
         }
         else if (walkMinimumDistance >= distance)
         {
             agent.enabled = false;
             animator.SetBool("Walk", false);
-
-            soundManager.StopWalk();
         }
 
         if(distance < minimumDistanceToSlam && !attacking)
@@ -140,8 +130,6 @@ public class GolemAI : MonoBehaviour
         animator.SetTrigger("Slam");
         attacking = true;
         Invoke(nameof(SlamEnded), 2f);
-
-        soundManager.PlayAttack();
     }
 
     void SlamEnded()
@@ -149,7 +137,7 @@ public class GolemAI : MonoBehaviour
         attacking = false;
     }
 
-    IEnumerator ShootProjectile()
+    public IEnumerator ShootProjectile()
     {
         while (true)
         {
@@ -158,8 +146,6 @@ public class GolemAI : MonoBehaviour
                 attacking = true;
                 animator.SetTrigger("Attack");
                 projectileCounter++;
-
-                soundManager.PlayAttack();
 
                 if (projectileCounter == purpleProjectileAfter)
                 {
@@ -218,11 +204,6 @@ public class GolemAI : MonoBehaviour
 
         projectileObj.LookAt(target.position);
 
-
-        //CHANGE THIS CODE TO THROW TOWARDS THE CURSOr
-        //I REPEAT
-        //Look
-        //THIS IS THE CODE
         projectileObj.GetComponent<Rigidbody>().AddForce(projectileObj.forward * force, ForceMode.VelocityChange);
 
         projectileObj.GetComponent<Projectile>().StartingJourney(damage);

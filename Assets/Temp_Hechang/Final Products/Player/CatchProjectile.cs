@@ -88,11 +88,6 @@ public class CatchProjectile : MonoBehaviour
 
         projectile.ThrewAgain(timer);
         projectile.GetComponent<Rigidbody>().isKinematic = false;
-
-        //CHANGE THIS CODE TO THROW TOWARDS THE CURSOr
-        //I REPEAT
-        //Look
-        //THIS IS THE CODE
         projectile.GetComponent<Rigidbody>().AddForce(ProjectilePoint.forward * 10, ForceMode.VelocityChange);
         projectile = null;
     }

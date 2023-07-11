@@ -11,8 +11,6 @@ public class Projectile : MonoBehaviour
         Purple
     }
 
-    public Transform blastParticle;
-
     public Projectile_Color color;
 
     public float damage;
@@ -20,7 +18,7 @@ public class Projectile : MonoBehaviour
 
     public void ThrewAgain(float holdTime)
     {
-        damage = damage * holdTime * 1.5f;
+        damage = damage * holdTime;
         Destroy(gameObject, 8f);
         transform.SetParent(null);
         grabbed = false;
@@ -43,18 +41,16 @@ public class Projectile : MonoBehaviour
             collision.collider.GetComponent<Health>().DecreaseHealth((int)damage);
         }
 
-        if (collision.collider.CompareTag("Player") && !grabbed)
-        {
-            collision.collider.GetComponent<Health>().DecreaseHealth((int)damage);
-        }
-
-        if (!grabbed)
-            Destroy(Instantiate(blastParticle, transform.position, Quaternion.identity).gameObject, 5f);
+        if(!grabbed)
             Destroy(gameObject);
     }
 
     public bool TryToGrab(Projectile_Color grabColor, Transform position)
     {
+        Debug.Log("I am of color : " + color);
+        Debug.Log("Trying to grab with : " + grabColor);
+        Debug.Log("So, I got caught : " + (color == grabColor));
+
         if(color == grabColor)
         {
             grabbed = true;

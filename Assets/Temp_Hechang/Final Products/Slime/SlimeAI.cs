@@ -4,8 +4,6 @@ using UnityEngine.AI;
 
 public class SlimeAI : MonoBehaviour
 {
-    EnemySoundsManager soundManager;
-
     Transform target;
 
     float distance;
@@ -24,8 +22,7 @@ public class SlimeAI : MonoBehaviour
 
     [Header("Attack")]
     public float attackInterval;
-    public SlimeAttack attack;
-    public int damage;
+    SlimeAttack attack;
     Collider myCollider;
     [SerializeField] ParticleSystem attackParticles;
 
@@ -34,7 +31,6 @@ public class SlimeAI : MonoBehaviour
     private void Awake()
     {
         healthUpdateEvent = GetComponent<HealthUpdateEvent>();
-        soundManager = GetComponent<EnemySoundsManager>();
     }
 
     private void OnEnable()
@@ -50,13 +46,11 @@ public class SlimeAI : MonoBehaviour
 
             attackParticles.gameObject.SetActive(false);
             this.enabled = false;
-            soundManager.PlayDeath();
-
         }
         else
         {
             animator.SetTrigger("Damage");
-            soundManager.PlayHit();
+
         }
     }
     public void HitAnimEnded()
@@ -76,14 +70,10 @@ public class SlimeAI : MonoBehaviour
         minimumFollowDistance = Random.Range(minimumFollowDistanceLower, minimumFollowDistanceUpper);
 
         StartCoroutine(MarShalare());
-        if(attack == null)
-            attack = GetComponentInChildren<SlimeAttack>();
 
-        attack.Damage = damage;
+        attack = GetComponentInChildren<SlimeAttack>();
         attack.enabled = false;
         myCollider = GetComponent<Collider>();
-
-        soundManager.PlayGrowl();
 
     }
 
@@ -110,8 +100,6 @@ public class SlimeAI : MonoBehaviour
             if (!moving)
             {
                 animator.SetTrigger("Attack");
-                soundManager.PlayAttack();
-
                 attack.enabled = true;
                 myCollider.enabled = false;
                 attackParticles.Play();
@@ -134,14 +122,10 @@ public class SlimeAI : MonoBehaviour
             agent.enabled = true;
             agent.destination = target.position;
             animator.SetBool("Walk", true);
-
-            soundManager.PlayWalk();
         } else
         {
             agent.enabled = false;
             animator.SetBool("Walk", false);
-
-            soundManager.StopWalk();
 
             var lookPos = target.position - transform.position;
             lookPos.y = 0;
